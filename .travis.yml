@@ -4,7 +4,7 @@ jdk:
 jobs:
   include:
     - stage: GitHub Release
-      script: echo "Deploying to GitHub releases ..."
+      script: echo "Deploying to GitHub releases..."
       deploy:
         provider: releases
         api_key: 138060c1031a55ad8dac8bcc23c53c051b4f0750
