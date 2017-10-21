@@ -41,13 +41,17 @@ repositories {
     maven {
         url "https://oss.sonatype.org/content/groups/public/"
     }
-
+    flatDir {
+        dirs 'lib/compile'
+    }
 }
 
 dependencies {
     provided 'org.spigotmc:spigot-api:1.12.1-R0.1-SNAPSHOT'
     provided group: 'org.bukkit', name: 'bukkit', version: '1.12.1-R0.1-SNAPSHOT'
     compile (group: 'org.bukkit', name: 'bukkit', version: bukkitVersion)
+    compile group: 'com.github.virtuald', name: 'curvesapi', version: '1.04'
+    compile name: 'toxiclibscore'
 }
 
 task fatJar(type: Jar) {

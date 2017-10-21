@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: :toxiclibscore:">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/compile/toxiclibscore.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
