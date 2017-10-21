@@ -1,3 +1,15 @@
 language: java
 jdk:
   - oraclejdk8          // tells Travis to use Java 8
+jobs:
+  include:
+    - script: "Running unit tests (1)"
+    - script: "Running unit tests (2)"
+    - stage: GitHub Release
+      script: echo "Deploying to GitHub releases ..."
+      deploy:
+        provider: releases
+        api_key: 138060c1031a55ad8dac8bcc23c53c051b4f0750
+        skip_cleanup: true
+        on:
+          tags: true

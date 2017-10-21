@@ -25,6 +25,8 @@ sourceSets {
     }
 }
 
+def bukkitVersion = '1.12.1-R0.1-SNAPSHOT'
+
 repositories {
     mavenCentral()
     maven {
@@ -33,9 +35,22 @@ repositories {
     maven {
         url "https://oss.sonatype.org/content/groups/public/"
     }
+
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
     provided 'org.spigotmc:spigot-api:1.12.1-R0.1-SNAPSHOT'
+    provided group: 'org.bukkit', name: 'bukkit', version: '1.12.1-R0.1-SNAPSHOT'
+    compile (group: 'org.bukkit', name: 'bukkit', version: bukkitVersion)
+}
+
+task fatJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Jar File Example',
+                'Implementation-Version': version,
+                'Main-Class': 'me.Michel.OTC.Core.Core'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
 }
