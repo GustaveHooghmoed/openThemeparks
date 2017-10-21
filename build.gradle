@@ -11,8 +11,6 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-java.srcDir 'src'
-
 configurations {
     provided
 }
