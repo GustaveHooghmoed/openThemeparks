@@ -1,0 +1,37 @@
+apply plugin: "java"
+sourceCompatibility = 1.8
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-core:1.9.+'
+}
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+java.srcDir 'src'
+
+configurations {
+    provided
+}
+sourceSets {
+    main { compileClasspath += configurations.provided }
+}
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+    maven {
+        url "https://oss.sonatype.org/content/groups/public/"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    provided 'org.spigotmc:spigot-api:1.12.1-R0.1-SNAPSHOT'
+}
