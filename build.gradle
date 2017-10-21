@@ -1,5 +1,4 @@
-apply plugin: "java"
-sourceCompatibility = 1.8
+
 repositories {
     mavenCentral()
 }
@@ -15,7 +14,12 @@ configurations {
     provided
 }
 sourceSets {
-    main { compileClasspath += configurations.provided }
+    all {
+        compileClasspath += configurations.provided
+        java {
+            srcDirs 'src'
+        }
+    }
 }
 sourceCompatibility = 1.8
 
