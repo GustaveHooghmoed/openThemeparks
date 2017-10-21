@@ -22,7 +22,13 @@ sourceSets {
         java {
             srcDirs 'src'
         }
+
     }
+}
+
+
+jar {
+    from "plugin.yml"
 }
 
 def bukkitVersion = '1.12.1-R0.1-SNAPSHOT'
