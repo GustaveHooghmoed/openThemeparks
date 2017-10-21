@@ -6,5 +6,4 @@ public interface Module {
 
     void unload();
 
-    void execute();
 }

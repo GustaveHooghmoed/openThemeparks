@@ -2,7 +2,7 @@ package me.Michel.OTC.Modules.Modules;
 
 import me.Michel.OTC.Modules.Module;
 
-public class baseModule implements Module {
+public class studioModule implements Module {
 
     @Override
     public void load() {
