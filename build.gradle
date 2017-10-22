@@ -60,7 +60,9 @@ task fatJar(type: Jar) {
                 'Implementation-Version': version,
                 'Main-Class': 'me.Michel.OTC.Core.Core'
     }
-    baseName = project.name + '-all'
+    baseName = 'openThemeparks'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
+    archiveName = "openThemeparks.jar"
+    destinationDir = file("C:/Users/Michel/Desktop/mc2/plugins")
 }

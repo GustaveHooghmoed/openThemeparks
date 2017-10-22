@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="openThemeparks_main" target="1.8" />
+      <module name="openThemeparks_test" target="1.8" />
       <module name="OTC_main" target="1.8" />
       <module name="OTC_test" target="1.8" />
     </bytecodeTargetLevel>

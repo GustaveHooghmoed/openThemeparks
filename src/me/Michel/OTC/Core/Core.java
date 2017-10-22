@@ -22,7 +22,6 @@ public class Core extends JavaPlugin {
         plugin = this;
         world = Bukkit.getWorld("wereld");
         this.moduleManager = new ModuleManager();
-
     }
 
     @Override
